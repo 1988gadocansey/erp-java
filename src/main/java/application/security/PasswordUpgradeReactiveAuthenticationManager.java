@@ -8,8 +8,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 import reactor.core.publisher.Mono;
 import reactor.core.scheduler.Schedulers;
-import application.user.User;
-import application.user.UserRepository;
+import application.entities.User;
+import application.repositories.UserRepository;
 
 /**
  * @author Rob Winch

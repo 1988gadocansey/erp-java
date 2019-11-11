@@ -1,4 +1,4 @@
-package application.Controllers;
+package application.controllers;
 
 public class StudentController {
 }

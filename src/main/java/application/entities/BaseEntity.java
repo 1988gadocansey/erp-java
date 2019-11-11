@@ -1,9 +1,9 @@
-package application.Entities;
+package application.entities;
 
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.annotation.*;
-import javax.swing.text.Document;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -11,8 +11,8 @@ import java.util.Date;
 @Getter
 public abstract class BaseEntity implements Serializable {
 
-    @Id
-    private String id;
+//    @Id
+//    private String id;
 
     @CreatedBy
     private String createdBy;

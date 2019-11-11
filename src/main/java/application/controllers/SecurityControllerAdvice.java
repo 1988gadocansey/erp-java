@@ -1,7 +1,8 @@
-package application.security;
+package application.controllers;
 
+import application.security.CurrentUser;
 import reactor.core.publisher.Mono;
-import application.user.User;
+import application.entities.User;
 
 import org.springframework.security.web.reactive.result.view.CsrfRequestDataValueProcessor;
 import org.springframework.security.web.server.csrf.CsrfToken;

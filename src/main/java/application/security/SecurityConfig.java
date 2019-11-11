@@ -30,6 +30,7 @@ public class SecurityConfig {
 			.httpBasic().and()
 			.formLogin()
 				.loginPage("/login");
+
 		return http.build();
 	}
 

@@ -1,4 +1,4 @@
-package application.Entities;
+package application.entities;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
@@ -6,21 +6,14 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.validation.constraints.NotEmpty;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.index.Indexed;
-import org.springframework.data.mongodb.core.mapping.Document;
-
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.Email;
-import javax.validation.constraints.Digits;
-import javax.validation.constraints.Past;
 import java.util.Date;
-import java.util.*;
+
 /**
  * @author Gad Ocansey
  */
-@Document
-public class Student {
+@Document(collection = "students")
+
+public class Student extends BaseEntity{
     @Id
     private Long id;
 

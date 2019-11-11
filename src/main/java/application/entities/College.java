@@ -1,6 +1,5 @@
-package application.Entities;
+package application.entities;
 import lombok.Data;
-import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.annotation.TypeAlias;
@@ -8,11 +7,6 @@ import org.springframework.data.annotation.TypeAlias;
 import javax.validation.constraints.NotEmpty;
 
 
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.Email;
-import javax.validation.constraints.Digits;
-import javax.validation.constraints.Past;
-import java.util.Date;
 import java.util.*;
 /**
  * @author Gad Ocansey
@@ -31,9 +25,25 @@ public class College extends BaseEntity{
     @Indexed(name="collegeCode", unique=true)
     private  String code;
 
-    private  List<Department> departments;
+    public College(@NotEmpty(message = "This field is required") String name, @NotEmpty(message = "This field is required") String code) {
+        this.name = name;
+        this.code = code;
+    }
 
+    public String getName() {
+        return name;
+    }
 
+    public void setName(String name) {
+        this.name = name;
+    }
 
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
 
 }

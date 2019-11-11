@@ -1,5 +1,6 @@
-package application.user;
+package application.repositories;
 
+import application.entities.User;
 import org.springframework.data.repository.reactive.ReactiveCrudRepository;
 import reactor.core.publisher.Mono;
 

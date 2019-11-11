@@ -1,8 +1,9 @@
-package application.message;
+package application.controllers;
 
+import application.repositories.MessageRepository;
 import reactor.core.publisher.Mono;
 import application.security.CurrentUser;
-import application.user.User;
+import application.entities.User;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.DeleteMapping;

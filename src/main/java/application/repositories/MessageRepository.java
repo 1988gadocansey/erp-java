@@ -1,5 +1,5 @@
-package application.message;
-
+package application.repositories;
+import application.entities.Message;
 import org.springframework.data.repository.reactive.ReactiveCrudRepository;
 import org.springframework.security.access.prepost.PostAuthorize;
 import org.springframework.stereotype.Component;

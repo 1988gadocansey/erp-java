@@ -1,9 +1,8 @@
-package application.message;
+package application.entities;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
-import application.user.User;
 
 /**
  * @author Rob Winch

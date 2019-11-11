@@ -1,5 +1,7 @@
-package application.user;
+package application.controllers;
 
+import application.entities.User;
+import application.repositories.UserRepository;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

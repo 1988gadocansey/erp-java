@@ -6,8 +6,8 @@ import org.springframework.security.core.userdetails.ReactiveUserDetailsService;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 import reactor.core.publisher.Mono;
-import application.user.User;
-import application.user.UserRepository;
+import application.entities.User;
+import application.repositories.UserRepository;
 
 import java.util.Collection;
 

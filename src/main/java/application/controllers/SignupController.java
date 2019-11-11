@@ -1,5 +1,7 @@
-package application.user;
+package application.controllers;
 
+import application.entities.User;
+import application.repositories.UserRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;

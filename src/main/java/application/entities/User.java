@@ -1,4 +1,4 @@
-package application.user;
+package application.entities;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;

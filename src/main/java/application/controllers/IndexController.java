@@ -1,15 +1,16 @@
-package application.security;
+package application.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 /**
  * @author Rob Winch
+ * @since 5.0
  */
 @Controller
-public class LoginController {
-	@GetMapping("/login")
-	public String login() {
-		return "login";
+public class IndexController {
+	@GetMapping("/")
+	String index() {
+		return "redirect:/inbox";
 	}
 }

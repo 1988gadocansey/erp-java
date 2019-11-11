@@ -1,11 +1,13 @@
 package application;
 
+import application.services.CollegeService;
 import org.springframework.beans.factory.SmartInitializingSingleton;
 import org.springframework.stereotype.Component;
-import application.message.Message;
-import application.message.MessageRepository;
-import application.user.User;
-import application.user.UserRepository;
+import application.entities.Message;
+import application.repositories.MessageRepository;
+import application.entities.User;
+import application.entities.College;
+import application.repositories.UserRepository;
 
 /**
  * @author Rob Winch
@@ -14,10 +16,12 @@ import application.user.UserRepository;
 class MongoInitiailizer implements SmartInitializingSingleton {
 	private final MessageRepository messages;
 	private final UserRepository users;
+	private final CollegeService college;
 
-	MongoInitiailizer(MessageRepository messages, UserRepository users) {
+	MongoInitiailizer(MessageRepository messages, UserRepository users,CollegeService college) {
 		this.messages = messages;
 		this.users = users;
+		this.college=college;
 	}
 
 	@Override
@@ -27,7 +31,8 @@ class MongoInitiailizer implements SmartInitializingSingleton {
 
 		User rob = new User(1L, "rob@example.com", passsword, "Rob", "Winch");
 		User joe = new User(100L, "joe@example.com", passsword, "Joe", "Grandja");
-
+		College col=new College("Science","SCI");
+		this.college.saveCollege(col);
 		this.users.save(rob).block();
 		this.users.save(joe).block();
 
