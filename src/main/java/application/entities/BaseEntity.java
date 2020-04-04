@@ -18,13 +18,13 @@ public abstract class BaseEntity implements Serializable {
     private String createdBy;
 
     @CreatedDate
-    private Date createdDate;
+    private Date createdDate = new Date();
 
     @LastModifiedBy
     private String updatedBy;
 
     @LastModifiedDate
-    private Date updatedDate;
+    private Date updatedDate= new Date();;
 
     @Version
     private Long version;

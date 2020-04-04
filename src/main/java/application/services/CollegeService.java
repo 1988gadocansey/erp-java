@@ -19,9 +19,11 @@ public class CollegeService implements CollegeDAO {
      return    collegeRepository.save(college);
     }
 
-    @Override
-    public Flux<College> findByID(int id) {
-        return null;
+
+
+
+    public Mono<College> findByID(long id) {
+        return  collegeRepository.findById(id);
     }
 
     @Override
@@ -29,8 +31,10 @@ public class CollegeService implements CollegeDAO {
         return collegeRepository.findAll();
     }
 
-    @Override
-    public Mono<Void> deleteById(String Id) {
-        return null;
+
+    public Mono<Void> delete(College existingCollege) {
+
+        return collegeRepository.delete(existingCollege);
     }
+
 }

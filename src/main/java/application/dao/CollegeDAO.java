@@ -7,7 +7,7 @@ import reactor.core.publisher.Mono;
 @Component
 public interface CollegeDAO {
     Mono<College> saveCollege(College college);
-    Flux<College> findByID(int id);
+
     Flux<College> findAll();
-    Mono<Void> deleteById(String Id);
+
 }

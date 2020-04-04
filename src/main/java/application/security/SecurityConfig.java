@@ -4,6 +4,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authorization.AuthorizationDecision;
 import org.springframework.security.config.annotation.method.configuration.EnableReactiveMethodSecurity;
+import org.springframework.security.config.annotation.web.reactive.EnableWebFluxSecurity;
 import org.springframework.security.config.web.server.ServerHttpSecurity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
@@ -17,10 +18,10 @@ import reactor.core.publisher.Mono;
  * @since 5.0
  */
 @Configuration
-@EnableReactiveMethodSecurity
+@EnableWebFluxSecurity
 public class SecurityConfig {
 	@Bean
-	SecurityWebFilterChain springSecurityFilterChain(ServerHttpSecurity http) {
+	SecurityWebFilterChain springWebFilterChain(ServerHttpSecurity  http) {
 		http
 			.authorizeExchange()
 				.pathMatchers("/users").access(this::isRob)
