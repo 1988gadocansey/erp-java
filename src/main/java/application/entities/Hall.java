@@ -10,12 +10,11 @@ import java.util.List;
 @Getter
 @Setter
 @ToString
-public class Status {
-	@Id
-	private String id;
-	private String name;
-	private  String year;
-	private List<Student> student;
-
+@Document(collection = "halls")
+public class Hall {
+    @Id
+    private String id;
+    private String name;
+    private String type;  //eg single/mixed
 
 }

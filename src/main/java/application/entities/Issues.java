@@ -10,12 +10,13 @@ import java.util.List;
 @Getter
 @Setter
 @ToString
-public class Status {
-	@Id
-	private String id;
-	private String name;
-	private  String year;
-	private List<Student> student;
+public class Issues {
+    @Id
+    private String id;
+    private String name;
+    private  String year;
+    private  int semester;
+    private List<Student> student;
 
 
 }
